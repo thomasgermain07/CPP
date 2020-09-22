@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/20 17:07:20 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/20 22:37:18 by thgermai         ###   ########.fr       */
+/*   Created: 2020/09/22 15:08:29 by thgermai          #+#    #+#             */
+/*   Updated: 2020/09/22 15:56:35 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE
-# define ZOMBIE
+#ifndef HUMANA
+# define HUMANA
 
+#include "Weapon.hpp"
 #include <iostream>
 
-class		Zombie
+class HumanA
 {
 	public :
-		~Zombie();
-		void			advert();
-		void			announce();
-		void			salutation();
+		HumanA(std::string _name, Weapon &_weapon);
+		void			attack();
+		void			setWeapon(Weapon &_weapon);
+	private :
 		std::string		name;
-		std::string		type;
+		Weapon			*weapon;
 };
+
 
 #endif

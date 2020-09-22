@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/20 17:07:20 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/20 22:37:18 by thgermai         ###   ########.fr       */
+/*   Created: 2020/09/21 15:55:31 by thgermai          #+#    #+#             */
+/*   Updated: 2020/09/21 16:11:12 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE
-# define ZOMBIE
+#ifndef ZOMBIEHORDE
+# define ZOMBIEHORDE
 
-#include <iostream>
+#include "Zombie.hpp"
 
-class		Zombie
+class ZombieHorde
 {
 	public :
-		~Zombie();
-		void			advert();
-		void			announce();
-		void			salutation();
-		std::string		name;
-		std::string		type;
+		ZombieHorde(int n);
+		void		announce();
+		~ZombieHorde();
+	private:
+		Zombie		*array;
+		int			n_zombie;
 };
 
-#endif
+# endif

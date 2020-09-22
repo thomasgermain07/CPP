@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/20 17:07:20 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/20 22:37:18 by thgermai         ###   ########.fr       */
+/*   Created: 2020/09/22 15:10:52 by thgermai          #+#    #+#             */
+/*   Updated: 2020/09/22 15:56:43 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE
-# define ZOMBIE
+#include "HumanA.hpp"
 
-#include <iostream>
-
-class		Zombie
+HumanA::HumanA(std::string _name, Weapon &_weapon)
 {
-	public :
-		~Zombie();
-		void			advert();
-		void			announce();
-		void			salutation();
-		std::string		name;
-		std::string		type;
-};
+	this->name = _name;
+	this->weapon = &_weapon;
+	return ;
+}
 
-#endif
+void			HumanA::attack()
+{
+	std::cout << this->name << " attacks with his " << this->weapon->getType() << std::endl;
+	return ;
+}
+
+void			HumanA::setWeapon(Weapon &_weapon)
+{
+	this->weapon = &_weapon;
+	return ;
+}

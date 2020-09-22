@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/20 17:07:20 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/20 22:37:18 by thgermai         ###   ########.fr       */
+/*   Created: 2020/09/21 16:48:02 by thgermai          #+#    #+#             */
+/*   Updated: 2020/09/21 22:38:23 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE
-# define ZOMBIE
-
 #include <iostream>
+#include "Human.hpp"
+#include "Brain.hpp"
 
-class		Zombie
+int				main()
 {
-	public :
-		~Zombie();
-		void			advert();
-		void			announce();
-		void			salutation();
-		std::string		name;
-		std::string		type;
-};
+	Human		bob;
 
-#endif
+	std::cout << bob.identify() << std::endl;
+	std::cout << bob.getBrain().identify() << std::endl;
+	return 0;
+}

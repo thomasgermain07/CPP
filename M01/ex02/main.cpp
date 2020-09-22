@@ -6,12 +6,11 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/20 17:07:47 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/20 22:35:06 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/09/20 22:36:39 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Zombie.hpp"
 #include "ZombieEvent.hpp"
 
 std::string		types[5] =

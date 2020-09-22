@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   ex04.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/20 17:07:20 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/20 22:37:18 by thgermai         ###   ########.fr       */
+/*   Created: 2020/09/21 16:24:24 by thgermai          #+#    #+#             */
+/*   Updated: 2020/09/21 16:38:30 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE
-# define ZOMBIE
-
 #include <iostream>
 
-class		Zombie
+int				main()
 {
-	public :
-		~Zombie();
-		void			advert();
-		void			announce();
-		void			salutation();
-		std::string		name;
-		std::string		type;
-};
+	std::string		string = "HI THIS IS BRAIN";
+	std::string		*ptr=&string;
+	std::string		&ref = string;
 
-#endif
+	std::cout << "ptr :    " << *ptr << std::endl;
+	std::cout << "ref :    " << ref << std::endl;
+	return 0;
+}

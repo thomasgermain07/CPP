@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/20 17:07:20 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/20 22:37:18 by thgermai         ###   ########.fr       */
+/*   Created: 2020/09/20 17:08:36 by thgermai          #+#    #+#             */
+/*   Updated: 2020/09/21 16:13:13 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE
-# define ZOMBIE
-
+#include "Zombie.hpp"
 #include <iostream>
 
-class		Zombie
+Zombie::~Zombie()
 {
-	public :
-		~Zombie();
-		void			advert();
-		void			announce();
-		void			salutation();
-		std::string		name;
-		std::string		type;
-};
+	std::cout << this->name << " is getting deleted" << std::endl;
+	return ;
+}
 
-#endif
+void			Zombie::announce()
+{
+	std::cout << "Hi !! I'm " << this->name << " a " << this->type << " zombie" << std::endl;
+	return ;
+}
