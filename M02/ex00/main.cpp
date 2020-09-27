@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Human.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/21 16:48:38 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/24 16:59:12 by thgermai         ###   ########.fr       */
+/*   Created: 2020/09/27 01:39:49 by thgermai          #+#    #+#             */
+/*   Updated: 2020/09/27 01:58:11 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN
-# define HUMAN
+#include <iostream>
+#include "Fixed.hpp"
 
-#include "Brain.hpp"
-
-class Human
+int				main()
 {
-	public :
-		std::string		identify() const;
-		const Brain		&getBrain() const;
-	private :
-		const Brain		brain;
-};
+	Fixed		a;
+	Fixed		b(a);
+	Fixed		c;
 
-#endif
+	c = b;
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
+	return 0;
+}

@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/21 15:55:31 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/21 16:11:12 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/09/24 14:08:59 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class ZombieHorde
 {
 	public :
 		ZombieHorde(int n);
-		void		announce();
+		void	 	announce();
 		~ZombieHorde();
 	private:
 		Zombie		*array;
