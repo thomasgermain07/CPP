@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 14:19:38 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/12 15:24:34 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/13 15:10:33 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,39 +42,59 @@ FragTrap::FragTrap(std::string const &_name)
 	return ;
 }
 
+FragTrap::FragTrap(FragTrap const &ref)
+{
+	*this = ref;
+	return ;
+}
+
+FragTrap			&FragTrap::operator=(FragTrap const &ref)
+{
+	this->hp = ref.hp;
+	this->maxHp = ref.maxHp;
+	this->energie = ref.energie;
+	this->maxEnergie = ref.maxEnergie;
+	this->lvl = ref.lvl;
+	this->name = ref.name;
+	this->meleeDmg = ref.meleeDmg;
+	this->rangeDmg = ref.rangeDmg;
+	this->armor = ref.armor;
+	return *this;
+}
+
 FragTrap::~FragTrap()
 {
 	std::cout << this->name << " has left the game" << std::endl;
 	return ;
 }
 
-int					FragTrap::getHp()
+int					FragTrap::getHp() const
 {
 	return this->hp;
 }
 
-std::string			FragTrap::getName()
+std::string			FragTrap::getName() const
 {
 	return this->name;
 }
 
-int					FragTrap::getMeleeAttackDmg()
+int					FragTrap::getMeleeAttackDmg() const
 {
 	return this->meleeDmg;
 }
 
-int					FragTrap::getRangedAttackDmg()
+int					FragTrap::getRangedAttackDmg() const
 {
 	return this->rangeDmg;
 }
 
-void				FragTrap::rangedAttack(std::string const &target)
+void				FragTrap::rangedAttack(std::string const &target) const
 {
 	std::cout << HEADER << "\"launched a ranged attack at " << target << "\"" << std::endl;
 	return ;
 }
 
-void				FragTrap::meleeAttack(std::string const &target)
+void				FragTrap::meleeAttack(std::string const &target) const
 {
 	std::cout << HEADER << "\"launch a melee attack at " << target << "\"" << std::endl;
 	return ;

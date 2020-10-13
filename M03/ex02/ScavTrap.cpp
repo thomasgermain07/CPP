@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 15:10:07 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/13 15:09:26 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/14 00:19:19 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,67 +66,6 @@ ScavTrap			&ScavTrap::operator=(ScavTrap const &ref)
 	this->rangeDmg = ref.rangeDmg;
 	this->armor = ref.armor;
 	return *this;
-}
-
-int					ScavTrap::getHp() const
-{
-	return this->hp;
-}
-
-std::string			ScavTrap::getName() const
-{
-	return this->name;
-}
-
-int					ScavTrap::getMeleeAttackDmg() const
-{
-	return this->meleeDmg;
-}
-
-int					ScavTrap::getRangedAttackDmg() const
-{
-	return this->rangeDmg;
-}
-
-void				ScavTrap::rangedAttack(std::string const &target)
-{
-	std::cout << HEADER << "\"launched a ranged attack at " << target << "\"" << std::endl;
-	return ;
-}
-
-void				ScavTrap::meleeAttack(std::string const &target)
-{
-	std::cout << HEADER << "\"launch a melee attack at " << target << "\"" << std::endl;
-	return ;
-}
-
-void				ScavTrap::takeDamage(unsigned int amount)
-{
-	int			dmg = amount - this->armor;
-
-	std::cout << "< " << this->name << " > took " << dmg << " dmg" << std::endl;
-	if (dmg <= 0)
-		return ;
-	if (this->hp - dmg <= 0)
-		this->hp = 0;
-	else
-		this->hp -= dmg;
-	return ;
-}
-
-void				ScavTrap::beRepaired(unsigned int amount)
-{
-	if (this->hp + (int)amount > this->maxHp)
-	{
-		std::cout << HEADER << "has been repaired of " << this->maxHp - this->hp << " unity" << std::endl;
-		this->hp = this->maxHp;
-	}
-	else
-	{
-		std::cout << HEADER << "has been repaired of " << amount << " unity" << std::endl;
-		this->hp += amount;
-	}
-	return ;
 }
 
 void				ScavTrap::challengeNewcomer(std::string const &target)

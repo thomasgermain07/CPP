@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 14:19:38 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/13 11:40:21 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/13 23:59:35 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,66 +68,6 @@ FragTrap::~FragTrap()
 	return ;
 }
 
-int					FragTrap::getHp()
-{
-	return this->hp;
-}
-
-std::string			FragTrap::getName()
-{
-	return this->name;
-}
-
-int					FragTrap::getMeleeAttackDmg()
-{
-	return this->meleeDmg;
-}
-
-int					FragTrap::getRangedAttackDmg()
-{
-	return this->rangeDmg;
-}
-
-void				FragTrap::rangedAttack(std::string const &target)
-{
-	std::cout << HEADER << "\"launched a ranged attack at " << target << "\"" << std::endl;
-	return ;
-}
-
-void				FragTrap::meleeAttack(std::string const &target)
-{
-	std::cout << HEADER << "\"launch a melee attack at " << target << "\"" << std::endl;
-	return ;
-}
-
-void				FragTrap::takeDamage(unsigned int amount)
-{
-	int			dmg = amount - this->armor;
-
-	std::cout << "< " << this->name << " > took " << dmg << " dmg" << std::endl;
-	if (dmg <= 0)
-		return ;
-	if (this->hp - dmg <= 0)
-		this->hp = 0;
-	else
-		this->hp -= dmg;
-	return ;
-}
-
-void				FragTrap::beRepaired(unsigned int amount)
-{
-	if (this->hp + (int)amount > this->maxHp)
-	{
-		std::cout << HEADER << "has been repaired of " << this->maxHp - this->hp << " unity" << std::endl;
-		this->hp = this->maxHp;
-	}
-	else
-	{
-		std::cout << HEADER << "has been repaired of " << amount << " unity" << std::endl;
-		this->hp += amount;
-	}
-	return ;
-}
 
 void				FragTrap::volthunter_dot_exe(std::string const &target)
 {

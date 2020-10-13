@@ -1,54 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/30 14:04:01 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/13 15:09:58 by thgermai         ###   ########.fr       */
+/*   Created: 2020/10/13 15:32:59 by thgermai          #+#    #+#             */
+/*   Updated: 2020/10/13 23:58:44 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP
-# define FRAGTRAP
+#ifndef CLAPTRAP
+# define CLAPTRAP
 
 # include <iostream>
 
 # define HEADER "< " << this->name << " > "
 
-class		FragTrap
+class ClapTrap
 {
 	public :
-		FragTrap();
-		FragTrap(std::string const &_name);
-		FragTrap(FragTrap const &ref);
-		~FragTrap();
-		FragTrap			&operator=(FragTrap const &ref);
+		ClapTrap();
+		ClapTrap(ClapTrap const &ref);
+		~ClapTrap();
+		ClapTrap			&operator=(ClapTrap const &ref);
 		int					getHp() const;
-		std::string			getName() const;
+		std::string			getName() const ;
 		int					getRangedAttackDmg() const;
 		int					getMeleeAttackDmg() const;
 		void				rangedAttack(std::string const &target) const;
 		void				meleeAttack(std::string const &target) const;
 		void				takeDamage(unsigned int amount);
 		void				beRepaired(unsigned int amount);
-		void				volthunter_dot_exe(std::string const &target);
-	private :
+	protected :
 		int					hp;
 		int					maxHp;
 		int					energie;
 		int					maxEnergie;
 		int					lvl;
-		std::string 		name;
+		std::string			name;
 		int					meleeDmg;
 		int					rangeDmg;
 		int					armor;
-		void				attack1(std::string const &target) const;
-		void				attack2(std::string const &target) const;
-		void				attack3(std::string const &target) const;
-		void				attack4(std::string const &target) const;
-		void				attack5(std::string const &target) const;
 };
 
 #endif

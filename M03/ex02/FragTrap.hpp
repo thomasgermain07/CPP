@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 14:04:01 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/13 11:33:12 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/13 23:56:27 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 # define FRAGTRAP
 
 # include <iostream>
+# include "ClapTrap.hpp"
 
 # define HEADER "< " << this->name << " > "
 
-class		FragTrap
+class		FragTrap : public ClapTrap
 {
 	public :
 		FragTrap();
@@ -25,25 +26,8 @@ class		FragTrap
 		FragTrap(FragTrap const &ref);
 		~FragTrap();
 		FragTrap			&operator=(FragTrap const &ref);
-		int					getHp();
-		std::string			getName();
-		int					getRangedAttackDmg();
-		int					getMeleeAttackDmg();
-		void				rangedAttack(std::string const &target);
-		void				meleeAttack(std::string const &target);
-		void				takeDamage(unsigned int amount);
-		void				beRepaired(unsigned int amount);
 		void				volthunter_dot_exe(std::string const &target);
 	private :
-		int					hp;
-		int					maxHp;
-		int					energie;
-		int					maxEnergie;
-		int					lvl;
-		std::string 		name;
-		int					meleeDmg;
-		int					rangeDmg;
-		int					armor;
 		void				attack1(std::string const &target) const;
 		void				attack2(std::string const &target) const;
 		void				attack3(std::string const &target) const;
