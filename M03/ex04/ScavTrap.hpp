@@ -1,42 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassContact.hpp                                   :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/19 15:22:57 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/16 01:38:31 by thgermai         ###   ########.fr       */
+/*   Created: 2020/10/12 15:10:09 by thgermai          #+#    #+#             */
+/*   Updated: 2020/10/14 00:26:31 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT
-# define CONTACT
+#ifndef SCAVTRAP
+# define SCAVTRAP
 
-#include <string>
+# include <iostream>
+# include "ClapTrap.hpp"
 
-class Contact
+# define HEADER "< " << this->name << " > "
+
+class		ScavTrap : public ClapTrap
 {
 	public :
-		void		get_info();
-		void		create_contact();
-		std::string *getInfo();
-		enum
-		{
-			first_name = 0,
-			last_name,
-			nickname,
-			login,
-			postal,
-			mail,
-			phone,
-			birthday,
-			meal,
-			underwear,
-			secret
-		};
-	private :
-		std::string	info[11];
+		ScavTrap();
+		ScavTrap(std::string const &_name);
+		ScavTrap(ScavTrap const &ref);
+		~ScavTrap();
+		ScavTrap			&operator=(ScavTrap const &ref);
+		void				challengeNewcomer(std::string const &target);
 };
 
 #endif

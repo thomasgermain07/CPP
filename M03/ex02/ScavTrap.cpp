@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 15:10:07 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/14 00:19:19 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/15 16:40:13 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,15 +56,7 @@ ScavTrap::~ScavTrap()
 
 ScavTrap			&ScavTrap::operator=(ScavTrap const &ref)
 {
-	this->hp = ref.hp;
-	this->maxHp = ref.maxHp;
-	this->energie = ref.energie;
-	this->maxEnergie = ref.maxEnergie;
-	this->lvl = ref.lvl;
-	this->name = ref.name;
-	this->meleeDmg = ref.meleeDmg;
-	this->rangeDmg = ref.rangeDmg;
-	this->armor = ref.armor;
+	ClapTrap::operator=(ref);
 	return *this;
 }
 

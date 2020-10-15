@@ -1,42 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassContact.hpp                                   :+:      :+:    :+:   */
+/*   SuperTrap.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/19 15:22:57 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/16 01:38:31 by thgermai         ###   ########.fr       */
+/*   Created: 2020/10/14 17:07:56 by thgermai          #+#    #+#             */
+/*   Updated: 2020/10/14 17:27:39 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT
-# define CONTACT
+#ifndef SUPERTRAP
+# define SUPERTRAP
 
-#include <string>
+# include <iostream>
+# include "FragTrap.hpp"
+# include "NinjaTrap.hpp"
 
-class Contact
+class SuperTrap : public NinjaTrap, public FragTrap
 {
 	public :
-		void		get_info();
-		void		create_contact();
-		std::string *getInfo();
-		enum
-		{
-			first_name = 0,
-			last_name,
-			nickname,
-			login,
-			postal,
-			mail,
-			phone,
-			birthday,
-			meal,
-			underwear,
-			secret
-		};
-	private :
-		std::string	info[11];
+		SuperTrap();
+		SuperTrap(std::string const &_name);
+		SuperTrap(SuperTrap const &ref);
+		~SuperTrap();
+		SuperTrap			&operator=(SuperTrap const &ref);
 };
 
 #endif

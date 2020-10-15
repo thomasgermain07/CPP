@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/18 22:51:38 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/19 15:16:52 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/16 01:30:46 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int			main(int ac, char **av)
 {
 	if (ac == 1)
-		std::cout << "* LOUD AN UNBREARABLE FEEDNBACK NOISE *\n";
+		std::cout << "* LOUD AN UNBEARABLE FEEDBACK NOISE *\n";
 	else
 	{
 		for (int i = 1; av[i]; i++)

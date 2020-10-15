@@ -3,7 +3,8 @@ OBJSDIR = .objs
 SRCS = main.cpp\
 		FragTrap.cpp\
 		ScavTrap.cpp\
-		ClapTrap.cpp
+		ClapTrap.cpp\
+		NinjaTrap.cpp
 OBJS = $(addprefix $(OBJSDIR)/, $(SRCS:.cpp=.o))
 DPDCS = $(OBJS:.o=.d)
 CFLAGS = -Wall -Wextra -Werror

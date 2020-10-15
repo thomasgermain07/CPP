@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 14:19:38 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/13 23:59:35 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/15 16:41:18 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,7 @@ FragTrap::FragTrap(FragTrap const &ref)
 
 FragTrap			&FragTrap::operator=(FragTrap const &ref)
 {
-	this->hp = ref.hp;
-	this->maxHp = ref.maxHp;
-	this->energie = ref.energie;
-	this->maxEnergie = ref.maxEnergie;
-	this->lvl = ref.lvl;
-	this->name = ref.name;
-	this->meleeDmg = ref.meleeDmg;
-	this->rangeDmg = ref.rangeDmg;
-	this->armor = ref.armor;
+	ClapTrap::operator=(ref);
 	return *this;
 }
 

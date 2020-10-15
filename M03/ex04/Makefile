@@ -1,12 +1,14 @@
 NAME = a.out
 OBJSDIR = .objs
 SRCS = main.cpp\
-		ClassContact.cpp\
-		ClassPhoneBook.cpp
+		FragTrap.cpp\
+		ScavTrap.cpp\
+		ClapTrap.cpp\
+		NinjaTrap.cpp\
+		SuperTrap.cpp
 OBJS = $(addprefix $(OBJSDIR)/, $(SRCS:.cpp=.o))
 DPDCS = $(OBJS:.o=.d)
-CXXFLAGS = -Wall -Wextra -Werror
-CXX = clang++
+CFLAGS = -Wall -Wextra -Werror
 
 opti :
 	@(make -j all)
@@ -16,12 +18,12 @@ all : $(NAME)
 -include $(DPDCS)
 
 $(NAME) : $(OBJS)
-	@(clang++ $(CXXFLAGS) $(OBJS) -o $(NAME))
+	@(clang++ $(CFLAGS) $(OBJS) -o $(NAME))
 	@(echo "$(NAME) created")
 
 $(OBJSDIR)/%.o : %.cpp | $(OBJSDIR)
 	@(echo "Compiling -> $^")
-	@(clang++ $(CXXFLAGS) -MMD -c $< -o $@)
+	@(clang++ $(CFLAGS) -MMD -c $< -o $@)
 
 $(OBJSDIR) :
 	@(mkdir -p .objs)

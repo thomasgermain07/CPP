@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/19 16:04:18 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/19 23:01:35 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/16 01:42:12 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,16 @@ static void		display_line(std::string str)
 void			PhoneBook::search_contact()
 {
 	int			index;
+	std::string *array;
 
 	std::cout << "     index|first name| last name|     login|" << std::endl;
 	for (int i = 0; i < n_contact; i++)
 	{
+		array = contacts[i].getInfo();
 		std::cout << std::setw(10) << i + 1 << "|";
-		display_line(contacts[i].info[Contact::first_name]);
-		display_line(contacts[i].info[Contact::last_name]);
-		display_line(contacts[i].info[Contact::login]);
+		display_line(array[Contact::first_name]);
+		display_line(array[Contact::last_name]);
+		display_line(array[Contact::login]);
 		std::cout << std::endl;
 	}
 	std::cout << "Select index" << std::endl;
@@ -65,7 +67,7 @@ void			PhoneBook::search_contact()
 		{
 			std::cout << std::endl;
 			contacts[index - 1].get_info();
-			return ;
+			break ;
 		}
 		else
 			std::cout << "Invalid input" << std::endl;

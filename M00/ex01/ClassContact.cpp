@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/19 15:49:25 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/19 22:22:03 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/16 01:38:34 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,3 +57,7 @@ void			Contact::create_contact()
 	return ;
 }
 
+std::string			*Contact::getInfo()
+{
+	return this->info;
+}
