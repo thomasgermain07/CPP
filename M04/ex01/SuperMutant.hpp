@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/16 14:59:50 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/19 14:59:29 by thgermai         ###   ########.fr       */
+/*   Created: 2020/10/20 14:46:55 by thgermai          #+#    #+#             */
+/*   Updated: 2020/10/20 14:55:58 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VICTIM
-# define VICTIM
+#ifndef SUPERMUTANT
+# define SUPERMUTANT
 
-# include <iostream>
+# include "Enemy.hpp"
 
-class	Victim
+class SuperMutant : public Enemy
 {
-	public :
-		Victim();
-		Victim(std::string const &_name);
-		Victim(Victim const &ref);
-		~Victim();
-		Victim				&operator=(Victim const &ref);
-		std::string			getName() const;
-		void				introducte() const;
-		virtual void		getPolymorphed() const;
-	protected :
-		std::string			name;
+	public:
+		SuperMutant();
+		SuperMutant(SuperMutant const &ref);
+		SuperMutant			&operator=(SuperMutant const &ref);
+		~SuperMutant();
+		void				takeDamage(int dmg);
 };
 
-std::ostream		&operator<<(std::ostream &os, Victim const &victim);
 
 #endif
+
+

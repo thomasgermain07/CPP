@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*   PlasmaRifle.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/16 14:59:50 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/19 14:59:29 by thgermai         ###   ########.fr       */
+/*   Created: 2020/10/20 01:25:11 by thgermai          #+#    #+#             */
+/*   Updated: 2020/10/20 01:40:27 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VICTIM
-# define VICTIM
+#ifndef PLASMARIFLE
+# define PLASMARIFLE
 
 # include <iostream>
+# include "AWeapon.hpp"
 
-class	Victim
+class PlasmaRifle : public AWeapon
 {
 	public :
-		Victim();
-		Victim(std::string const &_name);
-		Victim(Victim const &ref);
-		~Victim();
-		Victim				&operator=(Victim const &ref);
-		std::string			getName() const;
-		void				introducte() const;
-		virtual void		getPolymorphed() const;
-	protected :
-		std::string			name;
+		PlasmaRifle();
+		PlasmaRifle(PlasmaRifle const &ref);
+		PlasmaRifle			&operator=(PlasmaRifle const &ref);
+		~PlasmaRifle();
+		void				attack() const;
 };
-
-std::ostream		&operator<<(std::ostream &os, Victim const &victim);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/20 17:06:36 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/20 21:53:24 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/19 14:12:08 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ Zombie			*ZombieEvent::newZombie(std::string name)
 {
 	Zombie		*z = new Zombie;
 
-	z->name = name;
-	z->type = setZombieType;
+	z->setName(name);
+	z->setType(setZombieType);
 	z->announce();
 	return z;
 }

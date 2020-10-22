@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/19 16:04:18 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/16 01:42:12 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/22 14:57:40 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,11 @@ void			PhoneBook::search_contact()
 	int			index;
 	std::string *array;
 
+	if (this->n_contact == 0)
+	{
+		std::cout << "No contact in the Phone Book" << std::endl;
+		return ;
+	}
 	std::cout << "     index|first name| last name|     login|" << std::endl;
 	for (int i = 0; i < n_contact; i++)
 	{

@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*   TacticalMarine.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/16 14:59:50 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/19 14:59:29 by thgermai         ###   ########.fr       */
+/*   Created: 2020/10/21 21:56:14 by thgermai          #+#    #+#             */
+/*   Updated: 2020/10/21 22:06:24 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VICTIM
-# define VICTIM
+#ifndef TACTICALMARINE
+# define TACTICALMARINE
 
+# include "ISpaceMarine.hpp"
 # include <iostream>
 
-class	Victim
+class	TacticalMarine : public ISpaceMarine
 {
 	public :
-		Victim();
-		Victim(std::string const &_name);
-		Victim(Victim const &ref);
-		~Victim();
-		Victim				&operator=(Victim const &ref);
-		std::string			getName() const;
-		void				introducte() const;
-		virtual void		getPolymorphed() const;
-	protected :
-		std::string			name;
+		TacticalMarine();
+		TacticalMarine(TacticalMarine const &ref);
+		TacticalMarine		&operator=(TacticalMarine const &ref);
+		~TacticalMarine();
+		ISpaceMarine		*clone() const;
+		void				battleCry() const;
+		void				rangedAttack() const;
+		void				meleeAttack() const;
 };
-
-std::ostream		&operator<<(std::ostream &os, Victim const &victim);
 
 #endif

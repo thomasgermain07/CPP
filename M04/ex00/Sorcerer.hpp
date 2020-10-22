@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 13:12:36 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/16 16:28:10 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/19 14:57:22 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 # include <iostream>
 # include "Victim.hpp"
+# include "Peon.hpp"
 
 class	Sorcerer
 {
 	public :
-		Sorcerer();
 		Sorcerer(std::string const &_name, std::string const &_title);
 		Sorcerer(Sorcerer const &ref);
 		~Sorcerer();
@@ -28,8 +28,8 @@ class	Sorcerer
 		std::string			getTitle() const;
 		void				introducte() const;
 		void				polymorph(Victim const &v) const;
-
 	private :
+		Sorcerer();
 		std::string			name;
 		std::string			title;
 };

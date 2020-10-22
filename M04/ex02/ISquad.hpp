@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*   ISquad.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/16 14:59:50 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/19 14:59:29 by thgermai         ###   ########.fr       */
+/*   Created: 2020/10/21 16:03:16 by thgermai          #+#    #+#             */
+/*   Updated: 2020/10/21 16:12:54 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VICTIM
-# define VICTIM
+#ifndef ISQUAD
+# define ISQUAD
 
 # include <iostream>
+# include "ISpaceMarine.hpp"
 
-class	Victim
+class		ISquad
 {
 	public :
-		Victim();
-		Victim(std::string const &_name);
-		Victim(Victim const &ref);
-		~Victim();
-		Victim				&operator=(Victim const &ref);
-		std::string			getName() const;
-		void				introducte() const;
-		virtual void		getPolymorphed() const;
-	protected :
-		std::string			name;
+		virtual ~ISquad() {};
+		virtual int				getCount() const = 0;
+		virtual ISpaceMarine	*getUnit(int) const = 0;
+		virtual int				push(ISpaceMarine*) = 0;
 };
-
-std::ostream		&operator<<(std::ostream &os, Victim const &victim);
 
 #endif

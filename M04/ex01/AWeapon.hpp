@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*   AWeapon.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/16 14:59:50 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/19 14:59:29 by thgermai         ###   ########.fr       */
+/*   Created: 2020/10/20 01:10:07 by thgermai          #+#    #+#             */
+/*   Updated: 2020/10/21 15:10:18 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VICTIM
-# define VICTIM
+#ifndef AWEAPON
+# define AWEAPON
 
 # include <iostream>
 
-class	Victim
+class		AWeapon
 {
 	public :
-		Victim();
-		Victim(std::string const &_name);
-		Victim(Victim const &ref);
-		~Victim();
-		Victim				&operator=(Victim const &ref);
+		AWeapon();
+		AWeapon(std::string const &_name, int _apCost, int _damage);
+		AWeapon(AWeapon const &ref);
+		AWeapon				&operator=(AWeapon const &ref);
+		virtual ~AWeapon();
 		std::string			getName() const;
-		void				introducte() const;
-		virtual void		getPolymorphed() const;
-	protected :
+		int					getApCost() const;
+		int					getDamage() const;
+		virtual void		attack() const = 0;
+	private :
 		std::string			name;
+		int					apCost;
+		int					damage;
 };
-
-std::ostream		&operator<<(std::ostream &os, Victim const &victim);
 
 #endif

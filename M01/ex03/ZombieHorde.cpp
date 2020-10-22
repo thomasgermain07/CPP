@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/21 16:00:45 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/21 16:19:52 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/19 14:20:25 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ ZombieHorde::ZombieHorde(int n)
 
 	for (int i = 0; i < n; i++)
 	{
-		array[i].name = names[std::rand() % (names->size() - 1)];
-		array[i].type = types[std::rand() % (types->size() - 1)];
+		array[i].setName(names[std::rand() % (names->size() - 1)]);
+		array[i].setType(types[std::rand() % (types->size() - 1)]);
 	}
 	return ;
 }

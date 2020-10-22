@@ -5,28 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/16 14:16:37 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/19 15:02:35 by thgermai         ###   ########.fr       */
+/*   Created: 2020/10/21 16:01:19 by thgermai          #+#    #+#             */
+/*   Updated: 2020/10/21 18:51:11 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sorcerer.hpp"
-#include "Victim.hpp"
-#include "Peon.hpp"
 #include <iostream>
-#include <sstream>
+#include "Squad.hpp"
 
-int				main()
+int			main()
 {
-	Sorcerer		robert("Robert", "the Magnificent");
-
-	Victim			jim("Jimmy");
-	Peon			joe("Joe");
-
-	std::cout << robert << jim << joe;
-
-	robert.polymorph(jim);
-	robert.polymorph(joe);
-
+	Squad		s1;
 	return 0;
 }

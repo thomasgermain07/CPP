@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/20 00:49:01 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/20 01:59:05 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/19 13:31:55 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ Pony::Pony()
 
 Pony::Pony(std::string name, std::string color)
 {
+	if (!n_instance)
+		std::cout << "no instance init" << std::endl;
 	this->m_name = name;
 	this->m_color = color;
 	this->n_instance++;

@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 13:13:23 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/16 16:28:31 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/19 14:57:34 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Sorcerer::Sorcerer()
 
 Sorcerer::Sorcerer(std::string const &_name, std::string const &_title)
 {
-	std::cout << _name << ", " << _title << ", is born !" << std::endl;
+	std::cout << _name << ", " << _title << ", is born!" << std::endl;
 	this->name = _name;
 	this->title = _title;
 	return ;
@@ -27,7 +27,7 @@ Sorcerer::Sorcerer(std::string const &_name, std::string const &_title)
 
 Sorcerer::Sorcerer(Sorcerer const &ref)
 {
-	std::cout << ref.name << ", " << ref.title << ", is born !" << std::endl;
+	std::cout << ref.name << ", " << ref.title << ", is born!" << std::endl;
 	*this = ref;
 	return ;
 }

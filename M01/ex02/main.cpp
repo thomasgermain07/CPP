@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/20 17:07:47 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/20 22:36:39 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/19 14:11:25 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,17 @@ void			go_hunt_brains(Zombie *z1, Zombie *z2, Zombie *z3)
 	z1->advert();
 	z2->advert();
 	z3->advert();
-	std::cout << "\nIn the fight " << z3->name << " died\n" << std::endl;
+	std::cout << "\nIn the fight " << z3->getName() << " died\n" << std::endl;
 	delete z3;
 }
 
 int				main()
 {
-	std::srand(std::time(NULL)); // Important for the random param
+	std::srand(std::time(NULL)); // Setup Random
 
 	Zombie		z1;
-	z1.name = "Daniel";
-	z1.type = types[4];
+	z1.setName("Daniel");
+	z1.setType(types[4]);
 	std::cout << "This is the story of a zombie horde\n" << std::endl;
 	z1.announce();
 	Zombie		*z2;

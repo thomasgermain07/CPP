@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                         :+:      :+:    :+:   */
+/*   ISpaceMarine.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/16 14:59:50 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/19 14:59:29 by thgermai         ###   ########.fr       */
+/*   Created: 2020/10/21 16:07:43 by thgermai          #+#    #+#             */
+/*   Updated: 2020/10/21 16:11:45 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VICTIM
-# define VICTIM
+#ifndef ISPACEMARINE
+# define ISPACEMARINE
 
 # include <iostream>
 
-class	Victim
+class		ISpaceMarine
 {
 	public :
-		Victim();
-		Victim(std::string const &_name);
-		Victim(Victim const &ref);
-		~Victim();
-		Victim				&operator=(Victim const &ref);
-		std::string			getName() const;
-		void				introducte() const;
-		virtual void		getPolymorphed() const;
-	protected :
-		std::string			name;
+		virtual ~ISpaceMarine() {};
+		virtual ISpaceMarine*		clone() const = 0;
+		virtual void				battleCry() const = 0;
+		virtual void				rangedAttack() const = 0;
+		virtual void				meleeAttack() const = 0;
 };
-
-std::ostream		&operator<<(std::ostream &os, Victim const &victim);
 
 #endif
