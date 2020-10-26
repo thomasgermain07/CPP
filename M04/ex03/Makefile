@@ -1,12 +1,11 @@
 NAME = a.out
 OBJSDIR = .objs
 SRCS = main.cpp\
-		Zombie.cpp\
-		ZombieHorde.cpp
+		AMateria.cpp
 OBJS = $(addprefix $(OBJSDIR)/, $(SRCS:.cpp=.o))
 DPDCS = $(OBJS:.o=.d)
 CXXFLAGS = -Wall -Wextra -Werror
-GXX = clang++
+CXX = clang++
 
 opti :
 	@(make -j all)
@@ -16,12 +15,12 @@ all : $(NAME)
 -include $(DPDCS)
 
 $(NAME) : $(OBJS)
-	@($(GXX) $(CXXFLAGS) $(OBJS) -o $(NAME))
+	@(clang++ $(CXXFLAGS) $(OBJS) -o $(NAME))
 	@(echo "$(NAME) created")
 
 $(OBJSDIR)/%.o : %.cpp | $(OBJSDIR)
 	@(echo "Compiling -> $^")
-	@($(GXX) $(CXXFLAGS) -MMD -c $< -o $@)
+	@(clang++ $(CXXFLAGS) -MMD -c $< -o $@)
 
 $(OBJSDIR) :
 	@(mkdir -p .objs)

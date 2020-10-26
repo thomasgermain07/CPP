@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   TacticalMarine.cpp                                 :+:      :+:    :+:   */
+/*   AssaultTerminator.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,53 +11,53 @@
 /* ************************************************************************** */
 
 
-#include "TacticalMarine.hpp"
+#include "AssaultTerminator.hpp"
 
-TacticalMarine::TacticalMarine()
+AssaultTerminator::AssaultTerminator()
 {
-	std::cout << "Tactical Marine ready for action" << std::endl;
+	std::cout << "* Teleports from space *" << std::endl;
 	return ;
 }
 
-TacticalMarine::TacticalMarine(TacticalMarine const &ref)
+AssaultTerminator::AssaultTerminator(AssaultTerminator const &ref)
 {
-	std::cout << "Tactical Marine ready for action" << std::endl;
+	std::cout << "* Teleports from space *" << std::endl;
 	*this = ref;
 	return;
 }
 
-TacticalMarine			&TacticalMarine::operator=(TacticalMarine const &ref)
+AssaultTerminator			&AssaultTerminator::operator=(AssaultTerminator const &ref)
 {
 	(void)ref;
 	return *this;
 }
 
-TacticalMarine::~TacticalMarine()
+AssaultTerminator::~AssaultTerminator()
 {
-	std::cout << "Aaargh ..." << std::endl;
+	std::cout << "I'll be back ..." << std::endl;
 	return ;
 }
 
-ISpaceMarine			*TacticalMarine::clone() const
+ISpaceMarine			*AssaultTerminator::clone() const
 {
-	TacticalMarine		*newTac = new TacticalMarine;
+	AssaultTerminator		*newTac = new AssaultTerminator;
 	return newTac;
 }
 
-void					TacticalMarine::battleCry() const
+void					AssaultTerminator::battleCry() const
 {
-	std::cout << "For the Holy PLOT!" << std::endl;
+	std::cout << "This code is unclean. Puryfy it!" << std::endl;
 	return ;
 }
 
-void					TacticalMarine::rangedAttack() const
+void					AssaultTerminator::rangedAttack() const
 {
-	std::cout << "* attacks with a bolter *" << std::endl;
+	std::cout << "* does nothing *" << std::endl;
 	return ;
 }
 
-void					TacticalMarine::meleeAttack() const
+void					AssaultTerminator::meleeAttack() const
 {
-	std::cout << "* attacks with a chainword *" << std::endl;
+	std::cout << "* attacks with a chainfist *" << std::endl;
 	return ;
 }

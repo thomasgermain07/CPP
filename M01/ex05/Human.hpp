@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/21 16:48:38 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/24 16:59:12 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/26 02:14:56 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ class Human
 {
 	public :
 		std::string		identify() const;
-		const Brain		&getBrain() const;
+		Brain const		&getBrain() const;
 	private :
-		const Brain		brain;
+		Brain const		brain;
 };
 
 #endif

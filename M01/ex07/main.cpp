@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/22 16:08:07 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/23 22:19:45 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/26 02:35:51 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ std::string		replace_name(std::string filename)
 	find = filename.find_last_of(".");
 	if (find != std::string::npos)
 		filename.replace(find, 9 ,".replace");
+	else
+		filename.append(".replace");
 	return filename;
 }
 
@@ -54,7 +56,6 @@ int				main(int ac, const char **av)
 	std::ifstream		input;
 	std::ofstream		output;
 	std::string			buff;
-	size_t				find;
 
 	if (check_param(ac, av))
 		return EXIT_FAILURE;
@@ -66,9 +67,8 @@ int				main(int ac, const char **av)
 		return err_handle(OPEN_ERR);
 	while (getline(input, buff))
 	{
-		find = buff.find(av[2]);
-		if (find != std::string::npos)
-			buff.replace(find, strlen(av[3]), av[3]);
+		while (buff.find(av[2]) != std::string::npos)
+			buff.replace(buff.find(av[2]), strlen(av[2]), av[3]);
 		output << buff << std::endl;
 	}
 	input.close();

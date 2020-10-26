@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Human.cpp                                          :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/21 16:48:26 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/26 02:16:41 by thgermai         ###   ########.fr       */
+/*   Created: 2020/10/24 17:24:40 by thgermai          #+#    #+#             */
+/*   Updated: 2020/10/24 17:36:26 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Human.hpp"
+#ifndef AMATERIA
+# define AMATERIA
 
-std::string		Human::identify() const
-{
-	return this->brain.identify();
-}
+#include <iostream>
 
-Brain const		&Human::getBrain() const
+class		AMateria
 {
-	return this->brain;
-}
+	public :
+		AMateria();
+		AMateria(AMateria const &ref);
+		AMateria			&operator=(AMateria const &ref);
+		~AMateria();
+		unsigned int		getXP() const;
+		std::string	const	&getType() const;
+		virtual AMateria	*clone() const;
+		virtual void		user(ICharacter &target);
+	private :
+		unsigned int		xp;
+		std::string			type;
+};
+
+#endif

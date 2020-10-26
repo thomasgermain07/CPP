@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/20 00:49:01 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/19 13:31:55 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/26 01:26:22 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ Pony::Pony()
 
 Pony::Pony(std::string name, std::string color)
 {
-	if (!n_instance)
-		std::cout << "no instance init" << std::endl;
 	this->m_name = name;
 	this->m_color = color;
 	this->n_instance++;
@@ -36,17 +34,18 @@ Pony::Pony(std::string name, std::string color)
 Pony::~Pony()
 {
 	this->n_instance--;
+	std::cout << "Deleting " << this->m_name << std::endl;
 	return ;
 }
 
-void			Pony::feed_the_pony()
+void			Pony::feed_the_pony() const
 {
 	std::cout << "Giving an apple to " << this->m_name << std::endl;
 	return ;
 }
 
-void			Pony::presentation()
+void			Pony::presentation() const
 {
 	std::cout << "I'am a " << this->m_color << " pony named " << this->m_name << std::endl;
+	return ;
 }
-

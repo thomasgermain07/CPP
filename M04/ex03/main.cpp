@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Human.cpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/21 16:48:26 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/26 02:16:41 by thgermai         ###   ########.fr       */
+/*   Created: 2020/10/24 17:24:25 by thgermai          #+#    #+#             */
+/*   Updated: 2020/10/24 17:31:31 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Human.hpp"
+#include <iostream>
+#include "AMateria.hpp"
 
-std::string		Human::identify() const
+int				main()
 {
-	return this->brain.identify();
-}
 
-Brain const		&Human::getBrain() const
-{
-	return this->brain;
+	return 0;
 }

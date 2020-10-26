@@ -1,8 +1,6 @@
 NAME = a.out
 OBJSDIR = .objs
-SRCS = main.cpp\
-		Zombie.cpp\
-		ZombieHorde.cpp
+SRCS = main.cpp
 OBJS = $(addprefix $(OBJSDIR)/, $(SRCS:.cpp=.o))
 DPDCS = $(OBJS:.o=.d)
 CXXFLAGS = -Wall -Wextra -Werror

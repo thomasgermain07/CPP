@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/20 17:06:36 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/19 14:12:08 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/26 01:53:53 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,18 @@ std::string		names[20] =
 	"Violeta",
 };
 
-std::string ZombieEvent::setZombieType = "Runner";
+ZombieEvent::ZombieEvent()
+{
+	this->zombieType = "Runner";
+	return ;
+}
 
 Zombie			*ZombieEvent::newZombie(std::string name)
 {
 	Zombie		*z = new Zombie;
 
 	z->setName(name);
-	z->setType(setZombieType);
+	z->setType(getZombieType());
 	z->announce();
 	return z;
 }
@@ -52,4 +56,15 @@ Zombie			*ZombieEvent::newZombie(std::string name)
 Zombie			*ZombieEvent::randomChump()
 {
 	return ZombieEvent::newZombie(names[std::rand() % (names->size() - 1)]);
+}
+
+void			ZombieEvent::setZombieType(std::string const &type)
+{
+	this->zombieType = type;
+	return ;
+}
+
+std::string		ZombieEvent::getZombieType() const
+{
+	return this->zombieType;
 }

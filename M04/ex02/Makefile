@@ -1,7 +1,9 @@
 NAME = a.out
 OBJSDIR = .objs
 SRCS = main.cpp\
-		Squad.cpp
+		Squad.cpp\
+		TacticalMarine.cpp\
+		AssaultTerminator.cpp
 OBJS = $(addprefix $(OBJSDIR)/, $(SRCS:.cpp=.o))
 DPDCS = $(OBJS:.o=.d)
 CXXFLAGS = -Wall -Wextra -Werror

@@ -6,12 +6,14 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/20 17:08:36 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/19 14:20:12 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/19 14:08:59 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 #include <iostream>
+
+#define HEADER "<" << this->name << " (" << this->type << ")> : "
 
 Zombie::~Zombie()
 {
@@ -19,9 +21,21 @@ Zombie::~Zombie()
 	return ;
 }
 
+void			Zombie::advert()
+{
+	std::cout << HEADER << "Braiiiiiiiiiinnnnnssss" << std::endl;
+	return ;
+}
+
 void			Zombie::announce()
 {
-	std::cout << "Hi !! I'm " << this->name << " a " << this->type << " zombie" << std::endl;
+	std::cout << HEADER << "Hi !! I'm " << this->name << " a " << this->type << " zombie" << std::endl;
+	return ;
+}
+
+void			Zombie::salutation()
+{
+	std::cout << HEADER << "Friiiiiiiiiiiends" << std::endl;
 	return ;
 }
 
