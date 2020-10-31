@@ -4,7 +4,8 @@ SRCS = main.cpp\
 		Fixed.cpp
 OBJS = $(addprefix $(OBJSDIR)/, $(SRCS:.cpp=.o))
 DPDCS = $(OBJS:.o=.d)
-CFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror
+GXX = clang++
 
 opti :
 	@(make -j all)
@@ -14,12 +15,12 @@ all : $(NAME)
 -include $(DPDCS)
 
 $(NAME) : $(OBJS)
-	@(clang++ $(CFLAGS) $(OBJS) -o $(NAME))
+	@($(GXX) $(CXXFLAGS) $(OBJS) -o $(NAME))
 	@(echo "$(NAME) created")
 
 $(OBJSDIR)/%.o : %.cpp | $(OBJSDIR)
 	@(echo "Compiling -> $^")
-	@(clang++ $(CFLAGS) -MMD -c $< -o $@)
+	@($(GXX) $(CXXFLAGS) -MMD -c $< -o $@)
 
 $(OBJSDIR) :
 	@(mkdir -p .objs)

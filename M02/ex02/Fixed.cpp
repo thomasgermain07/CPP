@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/27 01:28:22 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/30 13:37:07 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/31 10:55:59 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,7 +151,6 @@ Fixed			Fixed::operator*(Fixed const &ref) const
 	Fixed		newFixed;
 	int			newFixedValue;
 
-	std::cout << this->toFloat() << " " << ref.toFloat() << std::endl;
 	newFixedValue = this->toFloat() * (float)ref.getRawBits();
 	newFixed.setRawBits(newFixedValue);
 	return newFixed;
@@ -163,7 +162,6 @@ Fixed			Fixed::operator/(Fixed const &ref) const
 	int			newFixedValue;
 	Fixed		dividor;
 
-	std::cout << this->toFloat() << " " << ref.toFloat() << std::endl;
 	newFixedValue = roundf((this->toFloat() / ref.toFloat()) * (1 << ref.n_bits));
 	newFixed.setRawBits(newFixedValue);
 	return newFixed;

@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/27 01:28:22 by thgermai          #+#    #+#             */
-/*   Updated: 2020/09/27 02:02:56 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/31 10:30:07 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ class		Fixed
 	public :
 		Fixed();
 		Fixed(Fixed const &ref);
-		~Fixed();
 		Fixed				&operator=(Fixed const &ref);
+		~Fixed();
 		int					getRawBits(void) const;
 		void				setRawBits(int const raw);
 	private :
