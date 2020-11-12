@@ -5,7 +5,8 @@ SRCS = main.cpp\
 		ScavTrap.cpp
 OBJS = $(addprefix $(OBJSDIR)/, $(SRCS:.cpp=.o))
 DPDCS = $(OBJS:.o=.d)
-CFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror
+CXX = clang++
 
 opti :
 	@(make -j all)
@@ -15,12 +16,12 @@ all : $(NAME)
 -include $(DPDCS)
 
 $(NAME) : $(OBJS)
-	@(clang++ $(CFLAGS) $(OBJS) -o $(NAME))
+	@($(CXX) $(CFLAGS) $(OBJS) -o $(NAME))
 	@(echo "$(NAME) created")
 
 $(OBJSDIR)/%.o : %.cpp | $(OBJSDIR)
 	@(echo "Compiling -> $^")
-	@(clang++ $(CFLAGS) -MMD -c $< -o $@)
+	@($(CXX) $(CFLAGS) -MMD -c $< -o $@)
 
 $(OBJSDIR) :
 	@(mkdir -p .objs)
