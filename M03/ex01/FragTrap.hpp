@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 14:04:01 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/13 15:09:58 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/10/13 11:33:12 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ class		FragTrap
 		FragTrap(FragTrap const &ref);
 		~FragTrap();
 		FragTrap			&operator=(FragTrap const &ref);
-		int					getHp() const;
-		std::string			getName() const;
-		int					getRangedAttackDmg() const;
-		int					getMeleeAttackDmg() const;
-		void				rangedAttack(std::string const &target) const;
-		void				meleeAttack(std::string const &target) const;
+		int					getHp();
+		std::string			getName();
+		int					getRangedAttackDmg();
+		int					getMeleeAttackDmg();
+		void				rangedAttack(std::string const &target);
+		void				meleeAttack(std::string const &target);
 		void				takeDamage(unsigned int amount);
 		void				beRepaired(unsigned int amount);
 		void				volthunter_dot_exe(std::string const &target);

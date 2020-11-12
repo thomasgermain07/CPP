@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 14:19:38 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/13 15:10:33 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/12 16:47:26 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,33 +68,33 @@ FragTrap::~FragTrap()
 	return ;
 }
 
-int					FragTrap::getHp() const
+int					FragTrap::getHp()
 {
 	return this->hp;
 }
 
-std::string			FragTrap::getName() const
+std::string			FragTrap::getName()
 {
 	return this->name;
 }
 
-int					FragTrap::getMeleeAttackDmg() const
+int					FragTrap::getMeleeAttackDmg()
 {
 	return this->meleeDmg;
 }
 
-int					FragTrap::getRangedAttackDmg() const
+int					FragTrap::getRangedAttackDmg()
 {
 	return this->rangeDmg;
 }
 
-void				FragTrap::rangedAttack(std::string const &target) const
+void				FragTrap::rangedAttack(std::string const &target)
 {
 	std::cout << HEADER << "\"launched a ranged attack at " << target << "\"" << std::endl;
 	return ;
 }
 
-void				FragTrap::meleeAttack(std::string const &target) const
+void				FragTrap::meleeAttack(std::string const &target)
 {
 	std::cout << HEADER << "\"launch a melee attack at " << target << "\"" << std::endl;
 	return ;
@@ -161,30 +161,30 @@ void				FragTrap::volthunter_dot_exe(std::string const &target)
 
 void				FragTrap::attack1(std::string const &target) const
 {
-	std::cout << HEADER << "has launch attack 1 at " << target << std::endl; // change output
+	std::cout << HEADER << "Catch this rocket " << target << std::endl;
 	return ;
 }
 
 void				FragTrap::attack2(std::string const &target) const
 {
-	std::cout << HEADER << "has launch attack 2 at " << target << std::endl; // change output
+	std::cout << HEADER << "Take this grenade in your face " << target << std::endl;
 	return ;
 }
 
 void				FragTrap::attack3(std::string const &target) const
 {
-	std::cout << HEADER << "has launch attack 3 at " << target << std::endl; // change output
+	std::cout << HEADER << "Come hand to hand combat if you are a robot " << target << std::endl;
 	return ;
 }
 
 void				FragTrap::attack4(std::string const &target) const
 {
-	std::cout << HEADER << "has launch attack 4 at " << target << std::endl; // change output
+	std::cout << HEADER << "Headshot in your face " << target << std::endl;
 	return ;
 }
 
 void				FragTrap::attack5(std::string const &target) const
 {
-	std::cout << HEADER << "has launch attack 5 at " << target << std::endl; // change output
+	std::cout << HEADER << "Eat my new .338 sniper rifle " << target << std::endl;
 	return ;
 }

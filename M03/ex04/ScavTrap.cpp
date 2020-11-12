@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 15:10:07 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/15 16:34:58 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/12 17:14:24 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 ScavTrap::ScavTrap()
 {
-	std::cout << "A default scave joined the game" << std::endl;
 	this->hp = 100;
 	this->maxHp = 100;
 	this->energie = 50;

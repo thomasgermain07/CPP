@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 00:47:27 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/15 16:35:22 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/12 17:14:15 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 NinjaTrap::NinjaTrap()
 {
-	std::cout << "A default ninja joined the game" << std::endl;
 	this->hp = 60;
 	this->maxHp = 60;
 	this->energie = 120;

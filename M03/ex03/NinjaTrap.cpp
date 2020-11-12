@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 00:47:27 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/15 16:41:56 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/12 17:06:14 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void					NinjaTrap::ninjaShoebox(ClapTrap &ref) const
 
 void					NinjaTrap::ninjaShoebox(ScavTrap &ref) const
 {
-	std::cout << HEADER << "is launching shurikens to " << ref.getName() << std::endl;
+	std::cout << HEADER << "is launching shurikens at " << ref.getName() << std::endl;
 	ref.takeDamage(this->rangeDmg);
 	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 17:07:56 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/14 17:27:39 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/12 17:20:54 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include "FragTrap.hpp"
 # include "NinjaTrap.hpp"
 
-class SuperTrap : public NinjaTrap, public FragTrap
+class SuperTrap : public virtual NinjaTrap, public virtual FragTrap
 {
 	public :
 		SuperTrap();

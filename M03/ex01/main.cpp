@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 14:30:05 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/13 14:59:58 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/12 16:59:04 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int			main()
 
 	std::cout << "\n\t--- Now testing ScavTrap ---\n" << std::endl;
 
-	ScavTrap		s1("Test");
+	ScavTrap		s1("Scav");
 
 	s1.challengeNewcomer(r1.getName());
 	s1.rangedAttack(r1.getName());
