@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AWeapon.hpp                                        :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/20 01:10:07 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/12 16:14:57 by thgermai         ###   ########.fr       */
+/*   Created: 2020/11/11 15:54:35 by thgermai          #+#    #+#             */
+/*   Updated: 2020/11/11 17:01:08 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AWEAPON
-# define AWEAPON
+#ifndef CHARACTER
+# define CHARACTER
 
 # include <iostream>
+# include "ICharacter.hpp"
+# include "AMateria.hpp"
 
-class		AWeapon
+class Character : public ICharacter
 {
 	public :
-		AWeapon(std::string const &_name, int _apCost, int _damage);
-		AWeapon(AWeapon const &ref);
-		AWeapon				&operator=(AWeapon const &ref);
-		virtual ~AWeapon();
-		std::string			getName() const;
-		int					getApCost() const;
-		int					getDamage() const;
-		virtual void		attack() const = 0;
+		Character(std::string const &_name);
+		Character(Character const &ref);
+		Character			&operator=(Character const &ref);
+		~Character();
+		std::string const 	&getName() const;
+		void				equip(AMateria *m);
+		void				unequip(int index);
+		void				use(int index, ICharacter &target);
+		void				printInv() const; // to del
 	private :
-		AWeapon();
+		AMateria			**inventory;
 		std::string			name;
-		int					apCost;
-		int					damage;
 };
 
 #endif

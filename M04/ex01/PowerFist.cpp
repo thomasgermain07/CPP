@@ -6,15 +6,15 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/20 01:59:53 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/21 15:13:57 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/12 16:18:46 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PowerFist.hpp"
 
-PowerFist::PowerFist() : AWeapon("Power Fist", 8, 50) { }
+PowerFist::PowerFist() : AWeapon("Power Fist", 8, 50) { return ; }
 
-PowerFist::PowerFist(PowerFist const &ref)
+PowerFist::PowerFist(PowerFist const &ref) : AWeapon(ref.getName(), ref.getApCost(), ref.getDamage())
 {
 	*this = ref;
 	return ;

@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 16:30:18 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/24 01:14:52 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/12 16:25:47 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int					Squad::push(ISpaceMarine *p)
 
 int					Squad::checkCont(ISpaceMarine *p) const
 {
-	t_container		*current = (t_container *)this->tail;
+	t_container		*current = (t_container *)this->head;
 
 	while (current)
 	{

@@ -6,15 +6,15 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/20 01:33:04 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/21 15:13:37 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/12 16:17:00 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PlasmaRifle.hpp"
 
-PlasmaRifle::PlasmaRifle() : AWeapon("Plasma Rifle", 5, 21) { }
+PlasmaRifle::PlasmaRifle() : AWeapon("Plasma Rifle", 5, 21) { return ; }
 
-PlasmaRifle::PlasmaRifle(PlasmaRifle const &ref)
+PlasmaRifle::PlasmaRifle(PlasmaRifle const &ref) : AWeapon(ref.getName(), ref.getApCost(), ref.getDamage())
 {
 	*this = ref;
 	return ;

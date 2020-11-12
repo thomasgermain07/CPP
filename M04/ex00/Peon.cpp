@@ -6,13 +6,13 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 16:19:41 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/19 14:38:13 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/12 16:07:20 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Peon.hpp"
 
-Peon::Peon() : Victim()
+Peon::Peon() : Victim(NULL)
 {
 	return ;
 }
@@ -23,10 +23,9 @@ Peon::Peon(std::string const &_name) : Victim(_name)
 	return ;
 }
 
-Peon::Peon(Peon const &ref)
+Peon::Peon(Peon const &ref) : Victim(ref.name)
 {
 	std::cout << "Zog zog" << std::endl;
-	*this = ref;
 	return ;
 }
 

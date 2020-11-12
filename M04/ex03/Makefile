@@ -1,7 +1,11 @@
 NAME = a.out
 OBJSDIR = .objs
 SRCS = main.cpp\
-		AMateria.cpp
+		AMateria.cpp\
+		Ice.cpp\
+		Cure.cpp\
+		Character.cpp\
+		MateriaSource.cpp
 OBJS = $(addprefix $(OBJSDIR)/, $(SRCS:.cpp=.o))
 DPDCS = $(OBJS:.o=.d)
 CXXFLAGS = -Wall -Wextra -Werror

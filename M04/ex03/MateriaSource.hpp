@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AWeapon.hpp                                        :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/20 01:10:07 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/12 16:14:57 by thgermai         ###   ########.fr       */
+/*   Created: 2020/11/11 23:49:52 by thgermai          #+#    #+#             */
+/*   Updated: 2020/11/11 23:53:32 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AWEAPON
-# define AWEAPON
+#ifndef MATERIASOURCE
+# define MATERIASOURCE
 
 # include <iostream>
+# include "AMateria.hpp"
+# include "IMateriaSource.hpp"
 
-class		AWeapon
+class MateriaSource : public IMateriaSource
 {
 	public :
-		AWeapon(std::string const &_name, int _apCost, int _damage);
-		AWeapon(AWeapon const &ref);
-		AWeapon				&operator=(AWeapon const &ref);
-		virtual ~AWeapon();
-		std::string			getName() const;
-		int					getApCost() const;
-		int					getDamage() const;
-		virtual void		attack() const = 0;
+		MateriaSource();
+		MateriaSource(MateriaSource const &ref);
+		MateriaSource			&operator=(MateriaSource const &ref);
+		~MateriaSource();
+		void 					learnMateria(AMateria*);
+		AMateria* 				createMateria(std::string const &type);
 	private :
-		AWeapon();
-		std::string			name;
-		int					apCost;
-		int					damage;
+		AMateria				**stock;
 };
 
 #endif
