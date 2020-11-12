@@ -21,11 +21,11 @@
 
 int				main()
 {
-	RadScorpion	__unused	*s1 = new RadScorpion;
-	SuperMutant	__unused	*m1 = new SuperMutant;
-	Character	__unused	*c1 = new Character ("Thomas");
-	PlasmaRifle __unused	*p1 = new PlasmaRifle;
-	PowerFist	__unused	*p2 = new PowerFist;
+	RadScorpion			*s1 = new RadScorpion;
+	SuperMutant			*m1 = new SuperMutant;
+	Character			*c1 = new Character ("Thomas");
+	PlasmaRifle 		*p1 = new PlasmaRifle;
+	PowerFist			*p2 = new PowerFist;
 
 	std::cout << "\n" << *c1 << std::endl;
 

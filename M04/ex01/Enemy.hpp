@@ -14,6 +14,7 @@
 # define ENEMY
 
 # include <iostream>
+# include <string.h>
 
 class		Enemy
 {

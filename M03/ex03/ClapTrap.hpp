@@ -14,6 +14,7 @@
 # define CLAPTRAP
 
 # include <iostream>
+# include <string.h>
 
 # define HEADER "< " << this->name << " > "
 

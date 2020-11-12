@@ -14,6 +14,7 @@
 # define AMATERIA
 
 # include <iostream>
+# include <string.h>
 # include "ICharacter.hpp"
 
 class		ICharacter;
