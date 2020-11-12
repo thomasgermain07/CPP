@@ -19,12 +19,12 @@ all : $(NAME)
 -include $(DPDCS)
 
 $(NAME) : $(OBJS)
-	@(clang++ $(CXXFLAGS) $(OBJS) -o $(NAME))
+	@($(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME))
 	@(echo "$(NAME) created")
 
 $(OBJSDIR)/%.o : %.cpp | $(OBJSDIR)
 	@(echo "Compiling -> $^")
-	@(clang++ $(CXXFLAGS) -MMD -c $< -o $@)
+	@($(CXX) $(CXXFLAGS) -MMD -c $< -o $@)
 
 $(OBJSDIR) :
 	@(mkdir -p .objs)
