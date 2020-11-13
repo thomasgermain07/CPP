@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 17:11:19 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/15 15:25:42 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/13 16:07:40 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ SuperTrap::SuperTrap(SuperTrap const &ref)
 
 SuperTrap::~SuperTrap()
 {
+	std::cout << this->name << " wasn't ready to destroy everything finally" << std::endl;
 	return ;
 }
 

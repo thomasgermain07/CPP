@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 14:30:05 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/12 16:57:00 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/13 16:00:48 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,5 @@ int			main()
 	}
 
 	std::cout << f1.getName() << " has " << f1.getHp() << " hp left" <<std::endl;
-
 	return 0;
 }

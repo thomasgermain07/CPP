@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/13 15:32:58 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/12 17:18:53 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/13 16:05:14 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap()
 {
-	std::cout << "ClapTrap constructor call" << std::endl;
+	std::cout << "ClapTrap creation" << std::endl;
 	memset(this, 0, sizeof(*this));
 	return ;
 }

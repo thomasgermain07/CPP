@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 14:19:38 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/12 17:14:46 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/13 16:06:18 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 FragTrap::FragTrap()
 {
+	std::cout << "FragTrap creation" << std::endl;
 	this->hp = 100;
 	this->maxHp = 100;
 	this->energie = 100;
@@ -55,7 +56,7 @@ FragTrap			&FragTrap::operator=(FragTrap const &ref)
 
 FragTrap::~FragTrap()
 {
-	std::cout << this->name << " has left the game" << std::endl;
+	std::cout << "FragTrap destruction" << std::endl;
 	return ;
 }
 

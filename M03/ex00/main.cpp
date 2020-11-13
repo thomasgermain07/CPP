@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 14:30:05 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/13 11:45:51 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/13 15:55:11 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ int			main()
 	r2.takeDamage(r1.getMeleeAttackDmg());
 	r2.rangedAttack(r1.getName());
 	r1.takeDamage(r2.getRangedAttackDmg());
+	r2.meleeAttack(r1.getName());
+	r1.takeDamage(r2.getMeleeAttackDmg());
+	std::cout << r1.getName() << " has " << r1.getHp() << " hp" << std::endl;
 	r1.beRepaired(10);
 	std::cout << r1.getName() << " has " << r1.getHp() << " hp" << std::endl;
 	r1.volthunter_dot_exe(r1.getName());

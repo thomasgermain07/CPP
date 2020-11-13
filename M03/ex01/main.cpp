@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 14:30:05 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/12 16:59:04 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/13 15:56:15 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,6 @@ int			main()
 	srand(time(NULL)); // setup rand
 
 	FragTrap		r1("Alex");
-	FragTrap		r2("Nico");
-
-	r1.meleeAttack(r2.getName());
-	r2.takeDamage(r1.getMeleeAttackDmg());
-	r2.rangedAttack(r1.getName());
-	r1.takeDamage(r2.getRangedAttackDmg());
-	r1.beRepaired(10);
-	std::cout << r1.getName() << " has " << r1.getHp() << " hp" << std::endl;
-	r1.volthunter_dot_exe(r1.getName());
-	r1.volthunter_dot_exe(r1.getName());
-	r1.volthunter_dot_exe(r1.getName());
-	r1.volthunter_dot_exe(r1.getName());
-	r1.volthunter_dot_exe(r1.getName());
-	r1.beRepaired(100);
-
-	std::cout << "\n\t--- Now testing ScavTrap ---\n" << std::endl;
-
 	ScavTrap		s1("Scav");
 
 	s1.challengeNewcomer(r1.getName());
