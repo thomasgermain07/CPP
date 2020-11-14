@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 16:32:17 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/14 20:25:22 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/14 21:16:27 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,18 +88,37 @@ void					Bureaucrat::decreaseGrade()
 	return ;
 }
 
-void					Bureaucrat::signForm(Form *f) const
+void					Bureaucrat::signForm(Form &f) const
 {
 	try
 	{
-		f->beSigned(this);
-		std::cout << this->name << " signed " << f->getName() << std::endl;
+		f.beSigned(*this);
+		std::cout << this->name << " signed " << f.getName() << std::endl;
 	}
-	catch(std::exception const &e)
+	catch(std::exception &e)
 	{
-		std::cout << this->name << " cannot signs " << f->getName() << " because it require a grade of " << f->getSignGrade() << " minimun" << std::endl;
+		std::cout << this->name << " cannot signs " << f.getName() << " because it require a grade of " << f.getSignGrade() << " minimun" << std::endl;
 	}
 	return ;
+}
+
+void					Bureaucrat::executeForm(Form const &f) const
+{
+	try
+	{
+		f.execute(*this);
+		std::cout << this->name << " executed " << f.getName() << std::endl;
+	}
+	catch (Form::GradeTooLowException const &e)
+	{
+		std::cerr << this->name << " cannot executes " << f.getName() << " because it requires a minimum grade of " << f.getExecGrade() << std::endl;
+		std::cerr << "Error log : " << e.what() << std::endl;
+	}
+	catch (Form::FormNotSignedException const &e)
+	{
+		std::cerr << this->name << " cannot executes " << f.getName() << " because it isn't signed" << std::endl;
+		std::cerr << "Error log : " << e.what() << std::endl;
+	}
 }
 
 /* *********** ********* ***********  */
