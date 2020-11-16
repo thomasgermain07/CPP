@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 23:02:08 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/15 00:23:07 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/16 01:13:03 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ Intern::~Intern()
 Form					*Intern::makeForm(std::string _type, std::string const &_target) const
 {
 	std::string			knownType[3] = {"SHRUBBERY CREATION", "ROBOTOMY REQUEST", "PRESIDENTIAL PARDON"};
+	Form				*(Intern::*forms[3])(std::string const &_target) const = {&Intern::createSCF, &Intern::createRQF, &Intern::createPPF};
 	std::string			copyType = _type;
 
 	for (int i = 0; _type[i]; i++)
@@ -47,30 +48,27 @@ Form					*Intern::makeForm(std::string _type, std::string const &_target) const
 		if (_type == knownType[i])
 		{
 			std::cout << "Intern created " << copyType << std::endl;
-			return this->formCreator(_target, i);
+			return (this->*forms[i])(_target);
 		}
 	}
 	throw Intern::FormUnknownException(copyType);
 	return NULL;
 }
 
-Form					*Intern::formCreator(std::string const &_target, int _type) const
+Form					*Intern::createSCF(std::string const &_target) const
 {
-	Form		*f = NULL;
+	return new ShrubberyCreationForm(_target);
+}
 
-	switch (_type)
-	{
-		case 0:
-			f = new ShrubberyCreationForm(_target);
-			break;
-		case 1:
-			f = new RobotomyRequestForm(_target);
-			break;
-		case 2:
-			f = new PresidentialPardonForm(_target);
-			break;
-	}
-	return f;
+Form					*Intern::createRQF(std::string const &_target) const
+{
+	return new RobotomyRequestForm(_target);
+}
+
+Form					*Intern::createPPF(std::string const &_target) const
+{
+	return new PresidentialPardonForm(_target);
+
 }
 
 Intern::FormUnknownException::FormUnknownException(std::string const &_type)
