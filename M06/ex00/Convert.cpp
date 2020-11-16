@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 15:21:52 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/16 00:33:44 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/16 17:45:50 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Convert::Convert(std::string const &_value)
 	{
 		try
 		{
-			this->value = std::stod(_value);
+			this->value = std::atof(_value.c_str());
 		}
 		catch (std::exception const &e)
 		{
