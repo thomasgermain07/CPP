@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 21:04:27 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/14 21:05:18 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/16 17:22:41 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class		PresidentialPardonForm : public Form
 	public:
 		PresidentialPardonForm(std::string const &_target);
 		PresidentialPardonForm(PresidentialPardonForm const &ref);
-		~PresidentialPardonForm();
+		virtual ~PresidentialPardonForm();
 		PresidentialPardonForm 		&operator=(PresidentialPardonForm const &ref);
 
 		void						execSub() const;
