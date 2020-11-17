@@ -1,7 +1,6 @@
-NAME = convert
+NAME = a.out
 OBJSDIR = .objs
 SRCS = main.cpp\
-		Convert.cpp
 
 OBJS = $(addprefix $(OBJSDIR)/, $(SRCS:.cpp=.o))
 DPDCS = $(OBJS:.o=.d)

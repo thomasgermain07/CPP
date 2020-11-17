@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 14:59:40 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/16 00:49:29 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/17 06:44:22 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,16 @@
 #include "Convert.hpp"
 #include <unistd.h>
 
+static void		headerMsg(std::string const &param)
+{
+	std::cout << "\e[32m\e[1mTesting : '" << param << "'\e[0m" << std::endl;
+}
+
 static void		convInput(std::string const &param)
 {
 	Convert		c;
 
-	std::cout << "Converting : \"" << param << "\""<< std::endl;
+	headerMsg(param);
 	try
 	{
 		c = Convert(param);
@@ -34,7 +39,7 @@ static void		makeTest()
 {
 	convInput("0");
 	std::cin.get();
-	convInput("120");
+	convInput("42.0f");
 	std::cin.get();
 	convInput("120.0f");
 	std::cin.get();
@@ -76,9 +81,9 @@ int				main(int ac, char **av)
 {
 	if (ac != 2)
 	{
-		std::cout << "No input executing standard test :" << std::endl;
-		std::cout << "Press enter between tests to go next" << std::endl;
-		sleep(2);
+		std::cout << "\e[32m\e[1mNo input executing standard test :" << std::endl;
+		std::cout << "Press enter to go to the next test\e[0m" << std::endl;
+		std::cin.get();
 		makeTest();
 	}
 	else
