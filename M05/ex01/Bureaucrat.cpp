@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 16:32:17 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/14 20:25:22 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/17 05:09:30 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,33 +58,19 @@ int						Bureaucrat::getGrade() const
 
 void					Bureaucrat::increaseGrade()
 {
-	try
-	{
-		if (this->grade != 1)
-			this->grade -= 1;
-		else
-			throw Bureaucrat::GradeTooHighException();
-	}
-	catch (std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
+	if (this->grade != 1)
+		this->grade -= 1;
+	else
+		throw Bureaucrat::GradeTooHighException();
 	return ;
 }
 
 void					Bureaucrat::decreaseGrade()
 {
-	try
-	{
-		if (this->grade != 150)
-			this->grade += 1;
-		else
-			throw Bureaucrat::GradeTooLowException();
-	}
-	catch (std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
+	if (this->grade != 150)
+		this->grade += 1;
+	else
+		throw Bureaucrat::GradeTooLowException();
 	return ;
 }
 
@@ -97,7 +83,7 @@ void					Bureaucrat::signForm(Form *f) const
 	}
 	catch(std::exception const &e)
 	{
-		std::cout << this->name << " cannot signs " << f->getName() << " because it require a grade of " << f->getSignGrade() << " minimun" << std::endl;
+		std::cout << this->name << " cannot sign " << f->getName() << " because it require a grade of " << f->getSignGrade() << " minimun" << std::endl;
 	}
 	return ;
 }

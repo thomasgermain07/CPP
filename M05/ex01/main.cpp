@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 16:32:02 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/14 01:12:56 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/17 05:07:23 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,5 @@ int				main()
 	delete f;
 	delete b;
 
-	// std::cout << "\n" << std::endl;
-	// system("leaks a.out");
 	return 0;
 }

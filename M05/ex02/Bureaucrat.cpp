@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 16:32:17 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/14 21:16:27 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/17 05:12:22 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,33 +58,19 @@ int						Bureaucrat::getGrade() const
 
 void					Bureaucrat::increaseGrade()
 {
-	try
-	{
-		if (this->grade != 1)
-			this->grade -= 1;
-		else
-			throw Bureaucrat::GradeTooHighException();
-	}
-	catch (std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
+	if (this->grade != 1)
+		this->grade -= 1;
+	else
+		throw Bureaucrat::GradeTooHighException();
 	return ;
 }
 
 void					Bureaucrat::decreaseGrade()
 {
-	try
-	{
-		if (this->grade != 150)
-			this->grade += 1;
-		else
-			throw Bureaucrat::GradeTooLowException();
-	}
-	catch (std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
+	if (this->grade != 150)
+		this->grade += 1;
+	else
+		throw Bureaucrat::GradeTooLowException();
 	return ;
 }
 
@@ -112,7 +98,6 @@ void					Bureaucrat::executeForm(Form const &f) const
 	catch (Form::GradeTooLowException const &e)
 	{
 		std::cerr << this->name << " cannot executes " << f.getName() << " because it requires a minimum grade of " << f.getExecGrade() << std::endl;
-		std::cerr << "Error log : " << e.what() << std::endl;
 	}
 	catch (Form::FormNotSignedException const &e)
 	{

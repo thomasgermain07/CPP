@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 16:32:02 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/15 00:21:46 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/17 05:22:49 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,17 @@ int 		main()
 	std::cout << "\t--- Testing with \"shrubbery creation\" and \"house\"" << std::endl;
 	testIntern("shrubbery creation", "house");
 
-	std::cout << "\t--- Testing with \"robotomy request\" and \"blender\"" << std::endl;
-	testIntern("robotomy request", "blender");
+	std::cout << "\t--- Testing with \"robOtomY requEst\" and \"blender\"" << std::endl;
+	testIntern("robOtomY requEst", "blender");
 
 	std::cout << "\t--- Testing with \"presidential pardon\" and \"Micheal Jackson\"" << std::endl;
 	testIntern("presidential pardon", "Micheal Jackson");
 
 	std::cout << "\t--- Testing with \"random thing\" and \"error\"" << std::endl;
 	testIntern("random thing", "error");
+
+	std::cout << "\t--- Testing with \"random stuff\" and \"error\"" << std::endl;
+	testIntern("random stuff", "error");
 
 	return 0;
 }
