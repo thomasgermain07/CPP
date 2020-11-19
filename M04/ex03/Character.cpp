@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 15:56:10 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/12 00:01:43 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/16 15:03:39 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,13 +90,4 @@ void						Character::use(int index, ICharacter &target)
 		return ;
 	this->inventory[index]->use(target);
 	return ;
-}
-
-void						Character::printInv() const
-{
-	int i = -1;
-	while (++i < 4)
-	{
-		std::cout << this->inventory[i] << std::endl;
-	}
 }

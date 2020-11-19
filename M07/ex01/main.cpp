@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 04:40:42 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/18 06:24:57 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/19 02:43:19 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int				main()
 	char			cArray[5] = {'s', 'a', 'l', 'u', 't'};
 	std::string 	strArray[3] = {"bonjour", "ce sont des strings", "au revoir"};
 	Fixed			fixedArray[4] = {12, 0, -14, 42.42f};
+	int				*iNull= NULL;
 
 	std::cout << "\t---> Int Array with func print" << std::endl;
 	::iter(iArray, 3, &print);
@@ -56,6 +57,8 @@ int				main()
 	::iter(fixedArray, 4, &print);
 	std::cout << "\t---> Fixed Array with func doubleV" << std::endl;
 	::iter(fixedArray, 4, &doubleV);
+	std::cout << "\t---> Null pointer with fun print" << std::endl;
+	::iter(iNull, 4, print);
 
 	return 0;
 }

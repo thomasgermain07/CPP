@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 13:13:23 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/19 14:57:34 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/16 14:31:45 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Sorcerer::Sorcerer(Sorcerer const &ref)
 
 Sorcerer::~Sorcerer()
 {
-	std::cout << this->name << ", " << this->title << " is dead. Consequences will never be the same!" << std::endl;
+	std::cout << this->name << ", " << this->title << ", is dead. Consequences will never be the same!" << std::endl;
 	return ;
 }
 

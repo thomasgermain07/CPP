@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 15:07:31 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/12 16:06:21 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/16 14:34:21 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Victim::Victim()
 
 Victim::Victim(std::string const &_name)
 {
-	std::cout << "A random victim called " << _name << " just appeared!" << std::endl;
+	std::cout << "Some random victim called " << _name << " just appeared!" << std::endl;
 	this->name = _name;
 	return ;
 }

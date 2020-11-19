@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/20 01:09:13 by thgermai          #+#    #+#             */
-/*   Updated: 2020/10/21 15:52:29 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/16 14:50:21 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@
 
 int				main()
 {
-	RadScorpion			*s1 = new RadScorpion;
-	SuperMutant			*m1 = new SuperMutant;
+	Enemy				*s1 = new RadScorpion;
+	Enemy				*m1 = new SuperMutant;
 	Character			*c1 = new Character ("Thomas");
-	PlasmaRifle 		*p1 = new PlasmaRifle;
-	PowerFist			*p2 = new PowerFist;
+	AWeapon				*p1 = new PlasmaRifle;
+	AWeapon				*p2 = new PowerFist;
 
 	std::cout << "\n" << *c1 << std::endl;
 
@@ -45,6 +45,7 @@ int				main()
 
 	std::cout << "\n\n---> Regeneration of Character's AP :" << std::endl;
 	{
+		std::cout << *c1;
 		for (int i = 4; i > 0; i--)
 			c1->recoverAP();
 		std::cout << *c1;
@@ -72,6 +73,13 @@ int				main()
 	c1->equip(NULL);
 	c1->recoverAP();
 	std::cout << *c1;
+
+	std::cout << "\n---> Deleting Character and Weapons" << std::endl;
+
+	delete c1;
+	delete p1;
+	delete p2;
+
 
 	return 0;
 }

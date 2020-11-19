@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 16:01:19 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/12 16:25:50 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/16 14:58:17 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ int			main()
 	m2 = NULL;
 	m3 = NULL;
 	m4 = NULL;
+
+	system("leaks a.out");
 
 	return 0;
 }

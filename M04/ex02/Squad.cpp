@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 16:30:18 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/12 16:25:47 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/16 14:56:49 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ int					Squad::checkCont(ISpaceMarine *p) const
 void				Squad::cleanCont()
 {
 	t_container		*current = (t_container *)this->head;
-	t_container		*next;
+	t_container		*next = NULL;
 
 	if (current)
 		next = current->next;

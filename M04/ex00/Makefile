@@ -3,7 +3,8 @@ OBJSDIR = .objs
 SRCS = main.cpp\
 		Sorcerer.cpp\
 		Victim.cpp\
-		Peon.cpp
+		Peon.cpp\
+		Pumkin.cpp
 OBJS = $(addprefix $(OBJSDIR)/, $(SRCS:.cpp=.o))
 DPDCS = $(OBJS:.o=.d)
 CXXFLAGS = -Wall -Wextra -Werror

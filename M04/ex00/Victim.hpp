@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 14:59:50 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/12 16:06:07 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/16 14:29:59 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,8 @@ class	Victim
 		std::string			getName() const;
 		void				introducte() const;
 		virtual void		getPolymorphed() const;
-	protected :
-		std::string			name;
 	private :
+		std::string			name;
 		Victim();
 };
 
