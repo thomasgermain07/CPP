@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 06:29:34 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/19 13:08:19 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/20 22:17:24 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,27 @@ class		Span
 		int						getCapacity() const;
 		std::vector<int>		getTab() const;
 
-		void					addNumber(int const value);
+		int						size() const;
 
-		int						shortestSpan() const;
-		int						longestSpan() const;
+		void					addNumber(int value);
+		void					addNumber(unsigned int from, unsigned int to, int value);
+
+		unsigned int			shortestSpan() const;
+		unsigned int			longestSpan() const;
 
 		struct			FullArrayException : std::exception
 		{
 			virtual const char	*what() const throw();
 		};
-
 		struct			NotEnoughValueException : std::exception
+		{
+			virtual const char	*what() const throw();
+		};
+		struct			OutOfRangeException : std::exception
+		{
+			virtual const char	*what() const throw();
+		};
+		struct			RangeErrorException : std::exception
 		{
 			virtual const char	*what() const throw();
 		};

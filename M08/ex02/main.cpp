@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 20:38:23 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/20 08:23:02 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/20 22:23:31 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ int			main(int ac, char **av)
 			mstack.pop();
 		}
 	}
-
 	std::cout << "\t---> Stack and MutantStack size after popped all value (should be 0)" << std::endl;
 	std::cout << "MutantStack : " << mstack.size() << std::endl;
 	std::cout << "Stack : " << s.size() << std::endl;
