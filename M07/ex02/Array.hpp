@@ -6,7 +6,7 @@
 /*   By: thgermai <thgermai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 08:20:54 by thgermai          #+#    #+#             */
-/*   Updated: 2020/11/19 02:22:37 by thgermai         ###   ########.fr       */
+/*   Updated: 2020/11/19 02:51:55 by thgermai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ARRAY
 
 # include <iostream>
+# include <string.h>
 
 struct IndexOutLimitsException : std::exception
 {
